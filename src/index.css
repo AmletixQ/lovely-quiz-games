@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f0c2d4;
+  --color-primary: #210636;
+  --color-accent: #ae322a;
+  --color-secondary: #7b337e;
+}
+
+@layer utilities {
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fall {
+    0% {
+      transform: translateY(-20vh) rotate(0deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(115vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes matchCelebrate {
+    0% {
+      transform: scale(1) rotateY(0deg);
+    }
+    50% {
+      transform: scale(1.1) rotateY(180deg);
+    }
+    100% {
+      transform: scale(0.95) rotateY(360deg);
+    }
+  }
+
+  .matched {
+    opacity: 0.7;
+    transform: scale(0.95) rotateY(360deg);
+    animation: matchCelebrate 1s ease-out;
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 0.7s ease-out;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.7s ease-out;
+  }
+}
