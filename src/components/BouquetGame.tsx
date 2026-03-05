@@ -37,7 +37,7 @@ export default function BouquetGame() {
       id: Math.random().toString(36),
       type: item.type,
       left: Math.random() * 90,
-      speed: 6 + Math.random(),
+      speed: 3.5 + Math.random(),
       emoji: item.emoji,
       collected: false,
     };
@@ -156,7 +156,7 @@ export default function BouquetGame() {
                 top: 0,
                 animation: flower.collected
                   ? undefined
-                  : `fall ${flower.speed}s linear forwards`,
+                  : `fall-flowers ${flower.speed}s linear forwards`,
               }}
               onClick={() => !flower.collected && collectFlower(flower.id)}
             >

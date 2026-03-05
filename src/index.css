@@ -36,7 +36,17 @@
       opacity: 0.9;
     }
     100% {
-      transform: translateY(115vh) rotate(720deg);
+      transform: translateY(125vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  @keyframes fall-flowers {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(80vh) rotate(720deg);
       opacity: 0;
     }
   }

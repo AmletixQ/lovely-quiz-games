@@ -34,7 +34,7 @@ export const GAMES: IGame[] = [
           Запоминай расположение карточек
         </h2>
         <h2 className="text-xl font-semibold text-red-500">
-          Следи за временет
+          Следи за временем
         </h2>
       </div>
     ),
@@ -43,9 +43,25 @@ export const GAMES: IGame[] = [
   {
     id: "hearts-clicker",
     name: "Клики в сердце",
-    description: "",
-    image: "",
-    instructions: <></>,
+    description:
+      "Тебе предстоит испытать свою скорость реакции! Попробуй набрать как можно большое количество собранных сердец!",
+    image: "💗",
+    instructions: (
+      <div className="flex flex-col gap-2">
+        <h2 className="text-xl font-semibold text-green-500 underline">
+          Терпение и труд - все перетрут
+        </h2>
+        <h2 className="text-xl font-semibold text-green-500">
+          Следи за новыми сердцами
+        </h2>
+        <h2 className="text-xl font-semibold text-green-500">
+          Комбо дает бонусы
+        </h2>
+        <h2 className="text-xl font-semibold text-red-500">
+          Следи за временем
+        </h2>
+      </div>
+    ),
     game: <HeartsClicker />,
   },
 ];
