@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import Button from "../ui/Button";
 import type { IGame } from "./game.interface";
+import { memo } from "react";
 
 interface Props {
   game: IGame;
   openDescription: (id: string) => void;
 }
 
-export default function GameCard({ game, openDescription }: Props) {
+function GameCard({ game, openDescription }: Props) {
   return (
-    <article className="bg-secondary text-background/90 relative flex w-fit flex-col items-center gap-4 rounded-lg p-4">
+    <article className="bg-secondary text-background/90 relative flex flex-col items-center gap-4 rounded-lg p-4">
       <h2 className="text-2xl font-bold">
         <span>{game.image}</span> {game.name}
       </h2>
@@ -33,3 +34,5 @@ export default function GameCard({ game, openDescription }: Props) {
     </article>
   );
 }
+
+export default memo(GameCard);

@@ -14,7 +14,7 @@ export default function GamesList() {
   );
 
   return (
-    <div className="animate-fade-in-down mx-auto grid grid-cols-4">
+    <div className="animate-fade-in-down mx-auto grid grid-cols-4 gap-4">
       {GAMES.map((game) => (
         <GameCard
           key={game.id}

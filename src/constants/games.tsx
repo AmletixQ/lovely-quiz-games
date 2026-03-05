@@ -1,5 +1,6 @@
 import BouquetGame from "../components/BouquetGame";
 import type { IGame } from "../components/games/game.interface";
+import HeartsClicker from "../components/HeartsClicker";
 import MemoryCards from "../components/MemoryCards";
 
 export const GAMES: IGame[] = [
@@ -38,5 +39,13 @@ export const GAMES: IGame[] = [
       </div>
     ),
     game: <MemoryCards />,
+  },
+  {
+    id: "hearts-clicker",
+    name: "Клики в сердце",
+    description: "",
+    image: "",
+    instructions: <></>,
+    game: <HeartsClicker />,
   },
 ];

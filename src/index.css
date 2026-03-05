@@ -53,6 +53,36 @@
     }
   }
 
+  @keyframes heart-explode {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  @keyframes heart-collect {
+    0% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.8) rotate(180deg) translateY(-60px);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(0) rotate(720deg) translateY(-150px);
+      opacity: 0;
+    }
+  }
+
   .matched {
     opacity: 0.7;
     transform: scale(0.95) rotateY(360deg);
@@ -65,5 +95,12 @@
 
   .animate-fade-in-left {
     animation: fadeInLeft 0.7s ease-out;
+  }
+
+  .animate-heart-explode {
+    animation: heart-explode 1s ease-out;
+  }
+  .animate-heart-collect {
+    animation: heart-collect 1s ease-out;
   }
 }

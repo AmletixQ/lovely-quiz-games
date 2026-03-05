@@ -1,15 +1,11 @@
-import type { ButtonHTMLAttributes } from "react";
+import { memo, type ButtonHTMLAttributes } from "react";
 import { cn } from "../../lib/cn";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   isAnimate?: boolean;
 }
 
-export default function Button({
-  isAnimate = true,
-  className,
-  ...props
-}: Props) {
+function Button({ isAnimate = true, className, ...props }: Props) {
   return (
     <button
       {...props}
@@ -25,3 +21,4 @@ export default function Button({
     />
   );
 }
+export default memo(Button);
