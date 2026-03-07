@@ -5,6 +5,7 @@ export interface IGame {
   name: string;
   description: string;
   image: string;
+  className?: string;
   instructions: ReactNode;
   game: ReactNode;
 }

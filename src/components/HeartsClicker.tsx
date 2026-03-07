@@ -31,7 +31,7 @@ export default function HeartsClicker() {
   const spawnHeart = useCallback(() => {
     const x = 10 + Math.random() * 80;
     const y = 10 + Math.random() * 70;
-    const size = 1 + Math.random();
+    const size = 2 + Math.random();
     const emoji = HEART_EMOJIS[Math.floor(Math.random() * HEART_EMOJIS.length)];
 
     setHearts((prev) => [

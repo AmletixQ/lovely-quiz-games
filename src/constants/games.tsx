@@ -21,6 +21,7 @@ export const GAMES: IGame[] = [
       </div>
     ),
     game: <BouquetGame />,
+    className: "animate-fade-in-left",
   },
   {
     id: "pair-memory-cards",
@@ -39,6 +40,7 @@ export const GAMES: IGame[] = [
       </div>
     ),
     game: <MemoryCards />,
+    className: "animate-fade-in-down",
   },
   {
     id: "hearts-clicker",
@@ -63,5 +65,6 @@ export const GAMES: IGame[] = [
       </div>
     ),
     game: <HeartsClicker />,
+    className: "animate-fade-in-right",
   },
 ];

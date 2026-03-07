@@ -21,6 +21,16 @@ createRoot(document.getElementById("root")!).render(
             <Route path=":id" element={<GamePage />} />
           </Route>
 
+          <Route path="anniversary">
+            <Route
+              index
+              element={
+                <div className="text-primary flex h-screen w-screen items-center justify-center text-5xl font-bold">
+                  Soon...
+                </div>
+              }
+            />
+          </Route>
         </Route>
       </Routes>
     </Router>

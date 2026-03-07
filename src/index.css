@@ -29,6 +29,16 @@
       transform: translateX(0);
     }
   }
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
   @keyframes fall {
     0% {
@@ -105,6 +115,9 @@
 
   .animate-fade-in-left {
     animation: fadeInLeft 0.7s ease-out;
+  }
+  .animate-fade-in-right {
+    animation: fadeInRight 0.7s ease-out;
   }
 
   .animate-heart-explode {

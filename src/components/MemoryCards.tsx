@@ -182,7 +182,7 @@ export default function MemoryCards() {
               <p className="mb-8 text-2xl">Готова найти все пары любви?</p>
             )}
 
-            <Button isAnimate={false} onClick={start}>
+            <Button onClick={start}>
               {isFinished ? "Играть заново" : "Начать игру"}
             </Button>
           </div>

@@ -14,9 +14,10 @@ export default function GamesList() {
   );
 
   return (
-    <div className="animate-fade-in-down mx-auto grid grid-cols-4 gap-4">
+    <div className="mx-auto flex items-center justify-between gap-4">
       {GAMES.map((game) => (
         <GameCard
+          className={game.className}
           key={game.id}
           game={game}
           openDescription={() => setCurrentGame(game.id)}
@@ -33,7 +34,7 @@ export default function GamesList() {
 
             <div className="flex items-center gap-2">
               <Link to={`/games/${GAME?.id}`}>
-                <Button isAnimate={false}>Играть</Button>
+                <Button>Играть</Button>
               </Link>
             </div>
           </div>

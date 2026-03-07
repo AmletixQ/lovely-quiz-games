@@ -25,11 +25,20 @@ export default function HomePage() {
       </h1>
 
       <div className="flex items-center gap-4">
-        <Button onClick={() => setIsOpen(true)} className="">
+        <Button
+          animation="animate-fade-in-left"
+          onClick={() => setIsOpen(true)}
+          className=""
+        >
           Открой карточку
         </Button>
         <Link to="/games">
-          <Button className="bg-accent hover:bg-accent/90">Готова?</Button>
+          <Button
+            animation="animate-fade-in-right"
+            className="bg-accent hover:bg-accent/90"
+          >
+            Готова?
+          </Button>
         </Link>
       </div>
     </div>

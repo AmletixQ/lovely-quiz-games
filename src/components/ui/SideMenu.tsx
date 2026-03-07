@@ -10,15 +10,11 @@ export default function SideMenu({ children }: PropsWithChildren) {
   return (
     <aside
       className={cn(
-        "flex w-full flex-col gap-4 rounded-lg bg-white p-6 shadow transition-all duration-300",
+        "flex w-full flex-col gap-4 rounded-bl-lg rounded-tl-lg bg-white p-6 shadow transition-all duration-300",
         isHide ? "max-w-12 p-2 pt-6" : "max-w-sm",
       )}
     >
-      <Button
-        isAnimate={false}
-        onClick={() => setIsHide(!isHide)}
-        className="w-fit p-1"
-      >
+      <Button onClick={() => setIsHide(!isHide)} className="w-fit p-1">
         {!isHide ? <ChevronsRight /> : <ChevronsLeft />}
       </Button>
 
@@ -26,7 +22,7 @@ export default function SideMenu({ children }: PropsWithChildren) {
 
       <Link
         to="/games"
-        className="bg-accent hover:bg-accent/80 w-fit cursor-pointer rounded-md p-1 transition duration-300 mt-auto"
+        className="bg-accent hover:bg-accent/80 mt-auto w-fit cursor-pointer rounded-md p-1 transition duration-300"
       >
         <LogOut color="white" strokeWidth={2} size={24} />
       </Link>
