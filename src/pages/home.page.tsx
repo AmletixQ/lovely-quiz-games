@@ -40,7 +40,7 @@ export default function HomePage() {
                 Но пока ты не ушла.. спасибо за то, что появилась в моей жизни.
                 Ты мой самый яркий и любимый луч света!
               </p>
-              <h2 className="text-center font-bold text-3xl">Люблю тебя ❤</h2>
+              <h2 className="text-center text-3xl font-bold">Люблю тебя ❤️</h2>
             </div>
           </div>
         </Modal>

@@ -18,7 +18,7 @@ export default function AnniversaryPage() {
         id="letter-container"
         className="text-primary flex h-[85%] w-[60%] flex-col gap-2 overflow-y-scroll bg-white/50 px-10 pt-10 text-xl"
       >
-        <h2 className="text-center text-5xl font-bold text-black">
+        <h2 className="text-center text-5xl font-bold">
           <AccentSpan>Третий</AccentSpan> год, да?
         </h2>
         <div className="flex flex-col gap-4 px-20">
@@ -70,7 +70,7 @@ export default function AnniversaryPage() {
         </div>
 
         <h1 className="py-10 text-center text-6xl font-bold">
-          С годовщиной, любимая ❤
+          С годовщиной, любимая ❤️
         </h1>
       </GameContainer>
       <p className="text-md text-gray-600">
