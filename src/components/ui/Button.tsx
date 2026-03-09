@@ -2,10 +2,14 @@ import { memo, type ButtonHTMLAttributes } from "react";
 import { cn } from "../../lib/cn";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  animation?: "animate-fade-in-down" | "animate-fade-in-right" | "animate-fade-in-left";
+  animation?:
+    | "animate-fade-in-down"
+    | "animate-fade-in-right"
+    | "animate-fade-in-left"
+    | "animate-fade-in-up";
 }
 
-function Button({ animation = true, className, ...props }: Props) {
+function Button({ animation, className, ...props }: Props) {
   return (
     <button
       {...props}
