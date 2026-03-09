@@ -62,6 +62,9 @@ export const GAMES: IGame[] = [
         <h2 className="text-xl font-semibold text-red-500">
           Следи за временем
         </h2>
+        <h2 className="text-primary text-lg font-semibold">
+          Мой рекорд - <span className="underline">3676</span>! Попробуй побить)
+        </h2>
       </div>
     ),
     game: <HeartsClicker />,

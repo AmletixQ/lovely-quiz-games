@@ -123,6 +123,10 @@ export default function HeartsClicker() {
   const isFinished = status === "finished";
 
   const getResultMessage = useCallback(() => {
+    if (score > 3500)
+      return "Я поклоняюсь твоему мастерству! Ты настоящая богиня, а я - твой вечный последователь!";
+    if (score > 2000)
+      return "НАЦИОНАЛЬНЫЙ УРОВЕНЬ! МИРОВОЙ РЕКОРД - НИЧТО ПЕРЕД ЭТИМ РЕЗУЛЬТАТОМ!";
     if (score > 1000)
       return "МИРОВОЙ РЕКОРД СЕРДЦЕБИЕНИЙ! Ты - королева страсти!";
     if (score > 700) return "Ого! Это круто! Я влюблен окончательно!";
@@ -136,6 +140,10 @@ export default function HeartsClicker() {
   return (
     <>
       <article className="text-primary flex items-center gap-10">
+        <div className="flex items-center gap-2">
+          <h4 className="text-md">Очки:</h4>
+          <h3 className="text-2xl font-bold">{score}</h3>
+        </div>
         <div className="flex items-center gap-2">
           <h4 className="text-md">⏰</h4>
           <h3 className="text-2xl font-bold">{timeLeft}с</h3>
@@ -180,7 +188,7 @@ export default function HeartsClicker() {
                 <h2 className="mb-6 text-4xl font-black drop-shadow-lg">
                   {score} сердцебиений!
                 </h2>
-                <h2 className="mb-6 text-4xl font-black drop-shadow-lg text-green-500">
+                <h2 className="mb-6 text-4xl font-black text-green-500 drop-shadow-lg">
                   {getResultMessage()}
                 </h2>
               </>
