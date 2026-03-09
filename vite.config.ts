@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // base: "/lovely-quiz-games/",
+  base: "/lovely-quiz-games/",
   plugins: [react(), tailwindcss()],
 });

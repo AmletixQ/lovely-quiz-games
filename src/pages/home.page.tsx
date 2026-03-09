@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "../components/ui/Button";
 import Modal from "../components/ui/Modal";
 import { Link } from "react-router-dom";
+import { LINKS } from "../constants/links";
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,7 +59,7 @@ export default function HomePage() {
           >
             Открой карточку
           </Button>
-          <Link to="/games">
+          <Link to={LINKS.games}>
             <Button
               animation="animate-fade-in-right"
               className="bg-accent hover:bg-accent/90"
@@ -68,7 +69,7 @@ export default function HomePage() {
           </Link>
         </div>
         {firstOpenedAnniversary === "true" && (
-          <Link to="/anniversary">
+          <Link to={LINKS.anniversary}>
             <Button
               animation="animate-fade-in-up"
               className="bg-secondary hover:bg-secondary/90"

@@ -12,21 +12,22 @@ import {
   GamesPage,
   HomePage,
 } from "./pages/index.ts";
+import { LINKS } from "./constants/links.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Router>
       <Routes>
-        <Route element={<RootLayout />}>
+        <Route path={LINKS.home} element={<RootLayout />}>
           <Route index element={<HomePage />} />
 
-          <Route path="games">
+          <Route path={LINKS.games}>
             <Route index element={<GamesPage />} />
             <Route path=":id" element={<GamePage />} />
           </Route>
 
-          <Route path="anniversary" element={<AnniversaryPage />} />
-          <Route path="congratulations" element={<CongratulationsPage />} />
+          <Route path={LINKS.anniversary} element={<AnniversaryPage />} />
+          <Route path={LINKS.congratulations} element={<CongratulationsPage />} />
         </Route>
       </Routes>
     </Router>

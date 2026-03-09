@@ -4,6 +4,7 @@ import GameCard from "./game.card";
 import Modal from "../ui/Modal";
 import { Link } from "react-router-dom";
 import Button from "../ui/Button";
+import { LINKS } from "../../constants/links.ts";
 
 export default function GamesList() {
   const [currentGame, setCurrentGame] = useState<string | null>(null);
@@ -33,7 +34,7 @@ export default function GamesList() {
             <p className="text-center">{GAME?.description}</p>
 
             <div className="flex items-center gap-2">
-              <Link to={`/games/${GAME?.id}`}>
+              <Link to={`${LINKS.game}/${GAME?.id}`}>
                 <Button>Играть</Button>
               </Link>
             </div>

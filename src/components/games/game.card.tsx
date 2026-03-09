@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import type { IGame } from "./game.interface";
 import { memo } from "react";
 import { cn } from "../../lib/cn";
+import { LINKS } from "../../constants/links";
 
 interface Props {
   game: IGame;
@@ -23,7 +24,8 @@ function GameCard({ game, className, openDescription }: Props) {
         <span>{game.image}</span> {game.name}
       </h2>
       <div className="flex gap-2">
-        <Link to={`/games/${game.id}`}>
+        <Link to={`${LINKS.game}/${game.id}`}>
+
           <Button className="text-md w-auto animate-none px-4 py-1 font-semibold">
             Играть
           </Button>
